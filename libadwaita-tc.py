@@ -11,6 +11,25 @@ import sys
 import os
 import subprocess as sp
 
+import argparse as ap
+
+
+parser = ap.ArgumentParser(
+                    prog='Libadwaita theme changer',
+                    description='Changes gtk-4 theme')
+
+parser.add_argument(
+    '--theme',
+    help='Takes name of the theme you want to set',
+    required=False,
+)
+parser.add_argument(
+    '--reset',
+    help='Resets theme',
+    required=False,
+)
+args = parser.parse_args()
+
 
 if __name__ == "__main__":
     try:
